@@ -26,8 +26,8 @@ jQuery(document).ready(function($){
             }, 1000);
          
          $('html,body').animate({
-	          scrollTop: $( "#newspeak-art" ).find('.current').offset().top
-	     }, 1000);
+             scrollTop: $( "#newspeak-art" ).find('.current').offset().top
+        }, 1000);
       });
       
       $('.btn').removeClass('waiting').delay(1000).removeAttr('disabled');

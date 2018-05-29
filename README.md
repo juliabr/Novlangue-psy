@@ -1,3 +1,3 @@
-## Robot Novlangue “Art contemporain”
+## Robot Novlangue “Psychanalyse”
 
-Générateur de Novlangue appliqué à l'art contemporain
+Générateur de Novlangue appliqué à la psychanalyse

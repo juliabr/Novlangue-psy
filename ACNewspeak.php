@@ -7,6 +7,7 @@ class ACNewspeak {
    var $subjects;
    var $adverbs;
    var $nominal_groups;
+   var $authors;
 
 	function __construct($path = 'fragments/') {
       
@@ -15,6 +16,7 @@ class ACNewspeak {
       $this->subjects = file($path.'subjects.txt');
       $this->adverbs = file($path.'adverbs.txt');
       $this->nominal_groups = file($path.'nominal_groups.txt');
+      $this->authors = file($path.'authors.txt');
       
 	}
 
@@ -25,6 +27,7 @@ class ACNewspeak {
       shuffle( $this->subjects );
       shuffle( $this->verbs );
       shuffle( $this->adverbs );
+      shuffle( $this->authors );
 
       $newspeak = '';
 
@@ -59,6 +62,13 @@ class ACNewspeak {
       else
          $newspeak = $independent_clause.', '.$dependent_clause;
 
+      $hide_author = rand(0,10);
+      $author = '';
+      if( !$hide_author ) {
+         $newspeak = trim($this->authors[$i]).', '.$newspeak;
+      }
+      
+
       $newspeak = str_replace(' de les', ' des', $newspeak);
       $newspeak = str_replace(' de des', ' des', $newspeak);
       $newspeak = str_replace(' de le', ' du', $newspeak);
@@ -66,6 +76,10 @@ class ACNewspeak {
       $newspeak = str_replace(' à les', ' aux', $newspeak);
       $newspeak = str_replace(' à le', ' au', $newspeak);
       $newspeak = str_replace('oe', '&oelig;', $newspeak);
+      $newspeak = str_replace(',.', '.', $newspeak);
+      $newspeak = str_replace(',,', ',', $newspeak);
+      $newspeak = str_replace('  ', ' ', $newspeak);
+      $newspeak = str_replace(' , ', ', ', $newspeak);
       
       //Non breaking spaces after prepositions (TODO fix)
       $newspeak = preg_replace('%([^a-zA-Zâéèï])(à|le|les|la|au|de|du|des|et|sup>|un|une|ce|ces|cette|en>) %i', '$1$2&nbsp;', $newspeak);

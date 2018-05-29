@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width" />
-<title>Robot Novlangue “Art contemporain”</title>
+<title>Robot Novlangue “Psychanalyse”</title>
 
 <link href='http://fonts.googleapis.com/css?family=Lora:400italic|Armata' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="assets/styles.css">
@@ -22,7 +22,7 @@
    <div id="wrapper">
       
       <header>
-         <h1>Robot Novlangue “Art contemporain”</h1>
+         <h1>Robot Novlangue “Psychanalyse”</h1>
       </header>
 
       <div id="newspeak-art" class="list">
