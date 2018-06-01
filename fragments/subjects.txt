@@ -1,7 +1,3 @@
-la pensée freudienne
-Freud
-Lacan
-l'univers lacanien
 la mère
 le père
 l'Œdipe
@@ -21,3 +17,5 @@ le sujet de l'inconscient
 le besoin oral
 l'objet anal
 la forclusion du nom-du-père
+un lapsus
+la question du désir

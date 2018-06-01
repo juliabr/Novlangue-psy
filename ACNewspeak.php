@@ -62,7 +62,7 @@ class ACNewspeak {
       else
          $newspeak = $independent_clause.', '.$dependent_clause;
 
-      $hide_author = rand(0,10);
+      $hide_author = rand(0,7);
       $author = '';
       if( !$hide_author ) {
          $newspeak = trim($this->authors[$i]).', '.$newspeak;
@@ -76,16 +76,16 @@ class ACNewspeak {
       $newspeak = str_replace(' à les', ' aux', $newspeak);
       $newspeak = str_replace(' à le', ' au', $newspeak);
       $newspeak = str_replace('oe', '&oelig;', $newspeak);
-      $newspeak = str_replace(',.', '.', $newspeak);
-      $newspeak = str_replace(',,', ',', $newspeak);
-      $newspeak = str_replace('  ', ' ', $newspeak);
-      $newspeak = str_replace(' , ', ', ', $newspeak);
       
       //Non breaking spaces after prepositions (TODO fix)
       $newspeak = preg_replace('%([^a-zA-Zâéèï])(à|le|les|la|au|de|du|des|et|sup>|un|une|ce|ces|cette|en>) %i', '$1$2&nbsp;', $newspeak);
       $newspeak = preg_replace('%([^a-zA-Zâéèï])(à|le|les|la|au|de|du|des|et|sup>|un|une|ce|ces|cette|en>) %i', '$1$2&nbsp;', $newspeak);
       
       $newspeak = mb_ucfirst($newspeak).'.';
+      $newspeak = str_replace(',.', '.', $newspeak);
+      $newspeak = str_replace(',,', ',', $newspeak);
+      $newspeak = str_replace('  ', ' ', $newspeak);
+      $newspeak = str_replace(' , ', ', ', $newspeak);
 
       return $newspeak;
    
