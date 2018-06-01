@@ -1,0 +1,121 @@
+@mixin at-least($device-width) {
+   @media screen and (min-width: $device-width) {
+      @content
+   }
+}
+
+@mixin until($device-width) {
+   @media screen and (max-width: $device-width - 1) {
+      @content
+   }
+}
+
+@mixin between($device-width-min, $device-width-max) {
+   @media screen and (min-width: $device-width-min - 1)  and (max-width: $device-width-max - 1) {
+      @content
+   }
+}
+
+@mixin background-image-retina($file, $type, $width, $height) {
+   background-image: url('../images/' + $file + '.' + $type);
+
+   @media (-webkit-min-device-pixel-ratio: 2), (-moz-min-device-pixel-ratio: 2) {
+      & {
+         background-image: url('../images/' + $file + '@2x.' + $type);
+         -webkit-background-size: $width $height;
+      }
+   }
+}
+
+
+/* !inline-block */
+
+@mixin inline-block($alignment: none) {
+   display: -moz-inline-stack;
+   display: inline-block;
+
+   @if $alignment and $alignment !=none {
+      vertical-align: $alignment;
+   }
+
+   *vertical-align: auto;
+   zoom: 1;
+   *display: inline;
+}
+
+
+/* !min-height */
+
+@mixin min-height($height) {
+   min-height: $height;
+   _height: $height;
+}
+
+
+/* http://hugogiraudel.com/2014/05/12/modernizr-sass-mixin/ */
+
+@mixin yep($feature) {
+   .#{$feature} & {
+      @content
+   }
+}
+
+@mixin nope($feature) {
+   .no-js &,
+   .no-#{$feature} & {
+      @content
+   }
+}
+
+@mixin clearfix() {
+   &:before,
+   &:after {
+      content: " "; // 1
+      display: table; // 2
+   }
+   &:after {
+      clear: both;
+   }
+}
+
+
+/* Layout for list items */
+
+@mixin grid($columns:3, $margin: 3, $item: '.item', $justifycontent: 'center') {
+   width: 100%;
+   position: relative;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: #{$justifycontent};
+   #{$item} {
+      display: block;
+      width: unquote( (100 + $margin - $columns*$margin) / $columns +'%');
+      position: relative;
+      margin-left: unquote($margin + '%');
+      margin-bottom: $baseline;
+      //margin-bottom: unquote($margin + '%'); //Bug FF
+      &:nth-of-type(n) {
+         margin-left: unquote($margin + '%');
+      }
+      &:nth-of-type(#{$columns}n+1) {
+         margin-left: 0;
+      }
+   }
+   //TODO: @supports
+   .no-flexbox & {
+      margin-right: unquote('-'+ $margin + '%');
+      display: block;
+      #{$item} {
+         float: left;
+         margin-left: unquote($margin + '%');
+         &:nth-of-type(n) {
+            clear: none;
+            margin-left: unquote($margin + '%');
+         }
+         &:nth-of-type(#{$columns}n+1) {
+            clear: both;
+            margin-left: 0;
+         }
+      }
+   }
+}

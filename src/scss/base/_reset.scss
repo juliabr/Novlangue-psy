@@ -1,0 +1,83 @@
+/* BORDER-BOX */
+* { -moz-box-sizing: border-box; box-sizing: border-box; }
+/**************/
+
+/* Resets & General */
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; margin: 0; padding: 0; }
+audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+audio:not([controls]) { display: none; }
+[hidden] { display: none; }
+html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+body { margin: 0; padding: 0; }
+
+/* Forms */
+form { margin: 0; }
+fieldset { border: 0; margin: 0; padding: 0; }
+button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+button, input { line-height: normal; }
+button, input[type="button"], input[type="reset"], input[type="submit"] { outline: none; cursor: pointer; -webkit-appearance: button; *overflow: visible; }
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0; *width: 13px; *height: 13px; }
+input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; }
+input[type="radio"] { vertical-align: text-bottom; }
+label, input[type=button], input[type=submit], button { cursor: pointer; }
+button { width: auto; overflow: visible; }
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+textarea { overflow: auto; vertical-align: top; resize: vertical; }
+
+ul, ol, li, p { margin: 0; padding: 0; }
+nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+   margin: 0;
+   padding: 0;
+   font-size: 1em;
+   a {
+      color: inherit;
+      text-decoration: none;
+   }
+}
+
+img::selection { background: transparent; }
+img::-moz-selection { background: transparent; }
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+
+sup, sub {
+  vertical-align: 0;
+  position: relative;
+}
+
+sup {
+  bottom: 1ex;
+}
+
+sub {
+  top: .5ex;
+}
+
+/**
+ * Avoid margins on nested elements
+ */
+li {
+  p, ul, ol {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+/**
+ * Prevents those to break out of their container
+ */
+img, table, td,
+blockquote, code, pre,
+textarea, input, video {
+  max-width: 100%;
+}
+
+/**
+ * Hide script and style tags in case of table mode
+ */
+body > script,
+body > style {
+  display: none !important;
+}

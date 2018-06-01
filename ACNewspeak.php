@@ -75,7 +75,7 @@ class ACNewspeak {
       $newspeak = str_replace(' de un', ' d’un', $newspeak);
       $newspeak = str_replace(' à les', ' aux', $newspeak);
       $newspeak = str_replace(' à le', ' au', $newspeak);
-      $newspeak = str_replace('oe', '&oelig;', $newspeak);
+      
       
       //Non breaking spaces after prepositions (TODO fix)
       $newspeak = preg_replace('%([^a-zA-Zâéèï])(à|le|les|la|au|de|du|des|et|sup>|un|une|ce|ces|cette|en>) %i', '$1$2&nbsp;', $newspeak);
@@ -88,7 +88,13 @@ class ACNewspeak {
       $newspeak = str_replace(' , ', ', ', $newspeak);
 
       return $newspeak;
-   
+   }
+
+   public function esc_sentence($newspeak) {
+      $newspeak = str_replace('&nbsp;', ' ', $newspeak);
+      $newspeak = str_replace('“', ' ', $newspeak);
+      $newspeak = str_replace('”', ' ', $newspeak);
+      return $newspeak;
    }
 
 }

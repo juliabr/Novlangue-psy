@@ -3,17 +3,16 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width" />
-<title>Robot Novlangue “Psychanalyse”</title>
+<title>Robot psychanalytique</title>
 
 <link href='http://fonts.googleapis.com/css?family=Lora:400italic|Armata' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" type="text/css" href="assets/styles.css">
-
+<link rel="stylesheet" type="text/css" href="assets/css/global.css">
+<link rel="me" href="https://twitter.com/juliabrr">
 <!--[if lt IE 9]>
 <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script>
 <![endif]-->
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="assets/app.js"></script>
+<script src="assets/js/bundle.js"></script>
 
 </head>
    
@@ -21,19 +20,41 @@
   
    <div id="wrapper">
       
-      <header>
-         <h1>Robot Novlangue “Psychanalyse”</h1>
-      </header>
+      <h1 id="main-title" class="header">Robot psychanalytique <button id="more-infos" class="btn-invisible icon-help-circled-1"><span class="hide">À propos</span></button></h1>
 
-      <div id="newspeak-art" class="list">
-         <section class="item current"><?php include('generate_newspeak.php'); ?></section>
-      </div>
-      
-      <form id="newspeak-art-form">
-         <input type="submit" value="Générer l'indicible" class="btn" />
-      </form>
+      <div id="content" class="content">
+
+         <div id="sphinx" class="icon-sphinx"></div>
+         <div id="newspeak-container" class="newspeak-container"></div>
+
+         <form id="newspeak-form" class="newspeak-form">
+            <input type="submit" value="Interroger le Sphinx" id="submit-btn" class="submit-btn">
+         </form>
         
+      </div>
+
+      <div class="light-modal" id="modal" role="dialog" aria-labelledby="light-modal-label" aria-hidden="true">
+
+      <div class="light-modal-content animated zoomIn">
+         <div class="light-modal-header">
+            <h3 class="light-modal-heading">Robot psychanalytique</h3>
+            <div class="light-modal-close-icon" aria-label="fermer">&times;</div>
+         </div>
+         <div class="light-modal-body">
+            <p>Le robot psychanalytique reprend les concepts de la psychanalyse, les apprivoise, puis génère aléatoirement des fragments de pensée psychanalytique.</p>
+            <p>Le Sphinx malicieux, complice et complexe, délivre les obscurs messages de cet inconscient-machine librement inspiré par Freud et Lacan.</p>
+         </div>
+         <div class="light-modal-footer">
+            <p><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Licence Creative Commons" src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png"></a>Mise à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Licence Creative Commons Attribution - Pas d’Utilisation Commerciale 4.0 International</a>.</p>
+
+            <p>Imaginé par <a href="https://juliabr.com">Julia Briend</a> | <a href="https://github.com/juliabr/Psybot" class="icon-github">Voir sur GitHub</a></p>
+         </div>
+      </div>
+
    </div>
-         
+   </div>
+
+   
+
 </body>
 </html>
