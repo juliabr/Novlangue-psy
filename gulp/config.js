@@ -13,7 +13,7 @@ var fileJS = 'bundle.js';
 var dest = './assets';
 
 // Proxy for BrowserSync
-var proxyURL = 'localhost/juliabr/lab/novlangue-psy/';
+var proxyURL = 'localhost/juliabr/lab/psybot/';
 
 // Option for gulp-cssnano
 var browserSupported = ['last 2 versions', 'ie >= 10', 'ff >= 20', 'ios 6', 'android 4'];
@@ -65,9 +65,9 @@ module.exports = {
       favicon_data_file: dest + '/favicons/faviconData.json',
       favicon_markup: dest + '/favicons/favicon_markup.html',
       masterPicture: src+'/img/favicon.png',
-      altPicture: src+'/img/favicon_alt.png',
-      whitePicture: src+'/img/favicon_white.png',
-      bgColor: '#4f8230',
+      altPicture: src+'/img/favicon.png',
+      whitePicture: src+'/img/favicon.png',
+      bgColor: '#7c1c47',
       appName: appName
    }
 };

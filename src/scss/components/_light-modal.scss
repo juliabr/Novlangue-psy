@@ -20,7 +20,7 @@
    width: 80vw;
    max-width: $medium -100;
    overflow: hidden;
-   border-radius: 25px;
+   border-radius: 15px;
    @include at-least($large) {
       min-width: $small;
       width: 40vw;
@@ -29,7 +29,7 @@
       width: 80vw;
    }
    @include until($small) {
-      width: 95vw;
+      width: 85vw;
    }
    position: relative;
    max-height: calc(100vh - 50px);
@@ -140,7 +140,6 @@
 .light-modal-caption {
    position: absolute;
    left: 50%;
-   -ms-transform: translateX(-50%);
    transform: translateX(-50%);
    top: 100%;
    padding: 10px 0;
@@ -155,28 +154,4 @@
 .light-modal.on {
    background: rgba(0, 0, 0, 0.7);
    display: flex;
-}
-
-// Animate modal
-.animated {
-  animation-duration: 0.7s;
-  animation-fill-mode: both;
-}
-
-// Instant message
-.instant-message {
-   display: none;
-   position: fixed;
-   background: transparent;
-   top: 0;
-   bottom: 0;
-   left: 0;
-   right: 0;
-   z-index: 9000;
-   transition: background 1s;
-   align-items: center;
-   justify-content: center;
-   &.on {
-      display: flex;
-   }
 }

@@ -92,8 +92,6 @@ class ACNewspeak {
 
    public function esc_sentence($newspeak) {
       $newspeak = str_replace('&nbsp;', ' ', $newspeak);
-      $newspeak = str_replace('“', ' ', $newspeak);
-      $newspeak = str_replace('”', ' ', $newspeak);
       return $newspeak;
    }
 
