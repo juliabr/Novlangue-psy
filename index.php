@@ -37,7 +37,7 @@
 
       <div class="light-modal-content animated zoomIn">
          <div class="light-modal-header">
-            <h3 class="light-modal-heading">Robot psychanalytique</h3>
+            <h3 class="light-modal-heading">#RobotPsy</h3>
             <div class="light-modal-close-icon" aria-label="fermer">&times;</div>
          </div>
          <div class="light-modal-body">
