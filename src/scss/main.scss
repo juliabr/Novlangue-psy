@@ -193,14 +193,15 @@ body {
       padding-bottom: 5rem;
    }
    .newspeak-quote {
-      font-size: 2.6rem;
-      line-height: 4rem;
+      font-size: 2.5rem;
+      line-height: 3.4rem;
    }
    .newspeak-form {
       padding: 1.5rem;
    }
    .twitter-btn {
-      margin-top: 0;
+      margin-top: $baseline;
+      padding: .5em 1em .5em;
    }
    .icon-sphinx {
       margin-top: -12rem;
